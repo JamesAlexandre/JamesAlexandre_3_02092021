@@ -83,6 +83,48 @@ nav .explorer {
   color: #727272;
 }
 
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+}
+.restaurants img {
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants a {
+  background-color: white;
+  margin: 20px;
+  border-radius: 15px;
+  position: relative;
+}
+.restaurants h2, .restaurants p {
+  margin: 8px;
+}
+.restaurants h2 {
+  font-size: 1.2em;
+}
+.restaurants i {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  font-size: 1.5em;
+}
+.restaurants__new {
+  max-width: fit-content;
+  background-color: #a9ffdb;
+  color: #00804f;
+  font-weight: bolder;
+  padding: 8px;
+  border-radius: 5%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
 .btn {
   background: linear-gradient(160deg, #FF79DA 0%, #9356DC 100%);
   height: 50px;

@@ -22,3 +22,46 @@
         color: darken($background, 50%);
     }
 }
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background;
+    img {
+        width: 300px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+    }
+    a {
+        background-color: white;
+        margin: 20px;
+        border-radius: 15px;
+        position: relative;
+    }
+    h2, p {
+        margin: 8px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+    i {
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+        font-size: 1.5em;
+    }
+    &__new {
+        max-width: fit-content;
+        background-color: rgb(169, 255, 219);
+        color: rgb(0, 128, 79);
+        font-weight: bolder;
+        padding: 8px;
+        border-radius: 5%;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
