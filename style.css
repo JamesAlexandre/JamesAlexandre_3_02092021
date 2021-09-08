@@ -16,10 +16,6 @@ a {
   color: black;
 }
 
-img {
-  width: 300px;
-}
-
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -49,6 +45,24 @@ nav .explorer {
   margin: 0 auto;
   text-align: center;
   padding: 30px 0 50px 0;
+}
+
+footer {
+  background-color: #3f3f3f;
+  padding: 15px;
+}
+footer h2, footer div, footer a {
+  color: white;
+  margin: 10px 0 10px 0;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.2em;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+footer > a {
+  display: block;
 }
 
 .fonctionnement ul {
@@ -100,6 +114,7 @@ nav .explorer {
   margin: 20px;
   border-radius: 15px;
   position: relative;
+  box-shadow: 5px 5px 15px -6px #444343;
 }
 .restaurants h2, .restaurants p {
   margin: 8px;

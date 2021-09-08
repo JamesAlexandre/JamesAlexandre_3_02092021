@@ -39,6 +39,7 @@
         margin: 20px;
         border-radius: 15px;
         position: relative;
+        @include box-shadow
     }
     h2, p {
         margin: 8px;
