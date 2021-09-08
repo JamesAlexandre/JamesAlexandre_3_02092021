@@ -1,0 +1,24 @@
+.fonctionnement {
+    ul {
+        padding-inline-start: 0;
+    }
+    li {
+        @include fonctionnement-li;
+        font-weight: bolder;
+    }
+    div {
+        position: absolute;
+        left: -8px;
+        background-color: blueviolet;
+        width: 20px;
+        border-radius: 100%;
+        text-align: center;
+        color: white;
+        font-weight: lighter;
+    }
+    i {
+        position: absolute;
+        left: 30px;
+        color: darken($background, 50%);
+    }
+}
