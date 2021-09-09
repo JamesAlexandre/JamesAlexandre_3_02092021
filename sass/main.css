@@ -17,10 +17,6 @@ a {
   color: black;
 }
 
-img {
-  width: 300px;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -33,6 +29,10 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 15px;
+}
+
+header img {
+  width: 50%;
 }
 
 nav {
@@ -57,7 +57,7 @@ nav .localisation p {
 }
 
 nav .explorer {
-  width: 300px;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,6 +68,27 @@ nav .explorer {
   margin: 0 auto;
   text-align: center;
   padding: 30px 0 50px 0;
+}
+
+footer {
+  background-color: #3f3f3f;
+  padding: 15px;
+}
+
+footer h2, footer div, footer a {
+  color: white;
+  margin: 10px 0 10px 0;
+}
+
+footer h2 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.2em;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+footer > a {
+  display: block;
 }
 
 .fonctionnement ul {
@@ -113,6 +134,123 @@ nav .explorer {
   color: #727272;
 }
 
+.restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f1f1f1;
+}
+
+.restaurants img {
+  width: 300px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.restaurants a {
+  background-color: white;
+  margin: 20px;
+  border-radius: 15px;
+  position: relative;
+  -webkit-box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
+          box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
+}
+
+.restaurants h2, .restaurants p {
+  margin: 8px;
+}
+
+.restaurants h2 {
+  font-size: 1.2em;
+}
+
+.restaurants i {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  font-size: 1.5em;
+}
+
+.restaurants__new {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  background-color: #a9ffdb;
+  color: #00804f;
+  font-weight: bolder;
+  padding: 8px;
+  border-radius: 5%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+main {
+  background-color: #f1f1f1;
+  padding-bottom: 40px;
+}
+
+main img {
+  width: 100%;
+}
+
+main .menu {
+  padding: 40px 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+main .menu__nom-restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .menu i {
+  font-size: 1.5em;
+}
+
+main .menu h2 {
+  font-family: 'Shrikhand', cursive;
+  font-weight: lighter;
+  font-size: 1.7em;
+  margin: 0;
+}
+
+main .menu__plat {
+  background-color: white;
+  border-radius: 20px;
+  margin: 15px 0;
+  -webkit-box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
+          box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
+}
+
+main .menu__plat h4, main .menu__plat p {
+  margin: 0;
+}
+
+main h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 2px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
 .btn {
   background: linear-gradient(160deg, #FF79DA 0%, #9356DC 100%);
   height: 50px;
@@ -123,7 +261,15 @@ nav .explorer {
   width: fit-content;
   margin: 0 auto;
   color: white;
-  -webkit-box-shadow: 5px 5px 15px -6px #444343;
-          box-shadow: 5px 5px 15px -6px #444343;
+  -webkit-box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
+          box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
+}
+
+input.btn {
+  border: none;
+  display: block;
+  min-width: 180px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
 }
 /*# sourceMappingURL=main.css.map */

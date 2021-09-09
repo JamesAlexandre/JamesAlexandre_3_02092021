@@ -25,6 +25,9 @@ header {
   justify-content: center;
   padding: 15px;
 }
+header img {
+  width: 50%;
+}
 
 nav {
   background-color: #f1f1f1;
@@ -39,7 +42,7 @@ nav .localisation p {
   margin: 15px;
 }
 nav .explorer {
-  width: 300px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -114,7 +117,7 @@ footer > a {
   margin: 20px;
   border-radius: 15px;
   position: relative;
-  box-shadow: 5px 5px 15px -6px #444343;
+  box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
 }
 .restaurants h2, .restaurants p {
   margin: 8px;
@@ -140,6 +143,48 @@ footer > a {
   right: 15px;
 }
 
+main {
+  background-color: #f1f1f1;
+  padding-bottom: 40px;
+}
+main img {
+  width: 100%;
+}
+main .menu {
+  padding: 40px 0;
+  width: 90%;
+  margin: 0 auto;
+}
+main .menu__nom-restaurant {
+  display: flex;
+  justify-content: space-between;
+}
+main .menu i {
+  font-size: 1.5em;
+}
+main .menu h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: lighter;
+  font-size: 1.7em;
+  margin: 0;
+}
+main .menu__plat {
+  background-color: white;
+  border-radius: 20px;
+  margin: 15px 0;
+  box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
+}
+main .menu__plat h4, main .menu__plat p {
+  margin: 0;
+}
+main h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 2px;
+  width: min-content;
+}
+
 .btn {
   background: linear-gradient(160deg, #FF79DA 0%, #9356DC 100%);
   height: 50px;
@@ -148,7 +193,15 @@ footer > a {
   width: fit-content;
   margin: 0 auto;
   color: white;
-  box-shadow: 5px 5px 15px -6px #444343;
+  box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
+}
+
+input.btn {
+  border: none;
+  display: block;
+  min-width: 180px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

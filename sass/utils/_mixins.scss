@@ -1,4 +1,4 @@
-@mixin box-shadow ($color: rgb(68, 67, 67)) {
+@mixin box-shadow ($color: rgba(68, 67, 67, 0.336)) {
     box-shadow:  5px 5px 15px -6px $color
 }
 
@@ -34,3 +34,4 @@
     border-radius: 100%;
     text-align: center;
 }
+

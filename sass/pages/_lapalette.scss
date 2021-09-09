@@ -1,0 +1,43 @@
+main {
+    background-color: $background;
+    padding-bottom: 40px;
+    img {
+        width: 100%;  
+    }
+    .menu {
+        padding: 40px 0;
+        width: 90%;
+        margin: 0 auto;
+        &__nom-restaurant {
+            display: flex;
+            justify-content: space-between;
+        }
+        i {
+            font-size: 1.5em;
+        }
+        h2 {
+            font-family: 'Shrikhand', cursive;
+            font-weight: lighter;
+            font-size: 1.7em;
+            margin: 0;
+        }
+        &__plat {
+            background-color: white;
+            border-radius: 20px;
+            margin: 15px 0;
+            @include box-shadow;
+            h4, p {
+                margin: 0;
+            }
+        }
+    }
+    
+    h3 {
+        text-transform: uppercase;
+        font-weight: lighter;
+        border-bottom: 3px solid $color-tertiary;
+        padding-bottom: 2px;
+        width: min-content;
+    }
+    
+}
