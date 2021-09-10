@@ -2,7 +2,12 @@ header {
     display: flex;
     justify-content: center;
     padding: 15px;
+    align-items: center;
     img {
         width: 50%;
+    }
+    a {
+        position: absolute;
+        left: 20px;
     }
 }

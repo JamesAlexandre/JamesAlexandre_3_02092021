@@ -26,8 +26,15 @@ main {
             border-radius: 20px;
             margin: 15px 0;
             @include box-shadow;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            .prix {
+                position: absolute;
+                right: 0;
+            }
             h4, p {
-                margin: 0;
+                margin: 10px;
             }
         }
     }

@@ -24,9 +24,14 @@ header {
   display: flex;
   justify-content: center;
   padding: 15px;
+  align-items: center;
 }
 header img {
   width: 50%;
+}
+header a {
+  position: absolute;
+  left: 20px;
 }
 
 nav {
@@ -173,9 +178,16 @@ main .menu__plat {
   border-radius: 20px;
   margin: 15px 0;
   box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+main .menu__plat .prix {
+  position: absolute;
+  right: 0;
 }
 main .menu__plat h4, main .menu__plat p {
-  margin: 0;
+  margin: 10px;
 }
 main h3 {
   text-transform: uppercase;
