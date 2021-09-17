@@ -3,7 +3,7 @@
 }
 
 @mixin btn {
-    background: linear-gradient(160deg, $color-secondary 0%, $color-primary 100%);
+    background: $gradient;
     height: 50px;
     border-radius: 40px;
     padding: 15px 20px 15px 20px;

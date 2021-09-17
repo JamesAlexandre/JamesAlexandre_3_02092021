@@ -1,4 +1,7 @@
 .fonctionnement {
+    h1 {
+        margin-left: 20px;
+    }
     ul {
         padding-inline-start: 0;
     }
@@ -28,18 +31,28 @@
     flex-direction: column;
     align-items: center;
     background-color: $background;
+    h1 {
+        margin-right: auto;
+        margin-left: 20px;
+    }
     img {
-        width: 300px;
         height: 150px;
         object-fit: cover;
         border-radius: 15px 15px 0 0;
+        width: 100%;
     }
     a {
         background-color: white;
         margin: 20px;
         border-radius: 15px;
         position: relative;
-        @include box-shadow
+        @include box-shadow;
+        width: 80%;
+        transform: scale(1);
+        transition: transform 200ms ease-in-out;
+        &:hover {
+            transform: scale(1.05);
+        }
     }
     h2, p {
         margin: 8px;
@@ -48,10 +61,12 @@
         font-size: 1.2em;
     }
     i {
+        display: block;
         position: absolute;
         right: 10px;
         bottom: 20px;
         font-size: 1.5em;
+
     }
     &__new {
         max-width: fit-content;

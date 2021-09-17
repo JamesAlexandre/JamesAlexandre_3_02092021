@@ -1,13 +1,9 @@
 .btn {
-    @include btn
+    @include btn;
+    border: none;
+    display: block;
+    min-width: 180px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
 }
 
-input {
-    &.btn {
-        border: none;
-        display: block;
-        min-width: 180px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1em;
-    }
-}

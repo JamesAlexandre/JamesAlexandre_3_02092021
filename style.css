@@ -73,6 +73,9 @@ footer > a {
   display: block;
 }
 
+.fonctionnement h1 {
+  margin-left: 20px;
+}
 .fonctionnement ul {
   padding-inline-start: 0;
 }
@@ -111,11 +114,15 @@ footer > a {
   align-items: center;
   background-color: #f1f1f1;
 }
+.restaurants h1 {
+  margin-right: auto;
+  margin-left: 20px;
+}
 .restaurants img {
-  width: 300px;
   height: 150px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
+  width: 100%;
 }
 .restaurants a {
   background-color: white;
@@ -123,6 +130,12 @@ footer > a {
   border-radius: 15px;
   position: relative;
   box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
+  width: 80%;
+  transform: scale(1);
+  transition: transform 200ms ease-in-out;
+}
+.restaurants a:hover {
+  transform: scale(1.05);
 }
 .restaurants h2, .restaurants p {
   margin: 8px;
@@ -131,6 +144,7 @@ footer > a {
   font-size: 1.2em;
 }
 .restaurants i {
+  display: block;
   position: absolute;
   right: 10px;
   bottom: 20px;
@@ -148,6 +162,16 @@ footer > a {
   right: 15px;
 }
 
+@keyframes slidedown {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 main {
   background-color: #f1f1f1;
   padding-bottom: 40px;
@@ -163,6 +187,7 @@ main .menu {
 main .menu__nom-restaurant {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 main .menu i {
   font-size: 1.5em;
@@ -181,13 +206,24 @@ main .menu__plat {
   display: flex;
   align-items: flex-end;
   position: relative;
+  animation: slidedown 2s;
 }
 main .menu__plat .prix {
   position: absolute;
   right: 0;
+  font-weight: bold;
 }
 main .menu__plat h4, main .menu__plat p {
   margin: 10px;
+}
+main .menu__plat p {
+  font-size: 0.9em;
+}
+main .menu__plat div > p {
+  width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main h3 {
   text-transform: uppercase;
@@ -206,9 +242,6 @@ main h3 {
   margin: 0 auto;
   color: white;
   box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
-}
-
-input.btn {
   border: none;
   display: block;
   min-width: 180px;

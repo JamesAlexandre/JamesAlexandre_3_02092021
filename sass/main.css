@@ -29,10 +29,18 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header img {
   width: 50%;
+}
+
+header a {
+  position: absolute;
+  left: 20px;
 }
 
 nav {
@@ -89,6 +97,10 @@ footer h2 {
 
 footer > a {
   display: block;
+}
+
+.fonctionnement h1 {
+  margin-left: 20px;
 }
 
 .fonctionnement ul {
@@ -148,12 +160,17 @@ footer > a {
   background-color: #f1f1f1;
 }
 
+.restaurants h1 {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
 .restaurants img {
-  width: 300px;
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 0 0;
+  width: 100%;
 }
 
 .restaurants a {
@@ -163,6 +180,18 @@ footer > a {
   position: relative;
   -webkit-box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
           box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
+  width: 80%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.restaurants a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .restaurants h2, .restaurants p {
@@ -174,6 +203,7 @@ footer > a {
 }
 
 .restaurants i {
+  display: block;
   position: absolute;
   right: 10px;
   bottom: 20px;
@@ -192,6 +222,32 @@ footer > a {
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+@-webkit-keyframes slidedown {
+  0% {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 main {
@@ -216,6 +272,9 @@ main .menu__nom-restaurant {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 main .menu i {
@@ -235,10 +294,36 @@ main .menu__plat {
   margin: 15px 0;
   -webkit-box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
           box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  -webkit-animation: slidedown 2s;
+          animation: slidedown 2s;
+}
+
+main .menu__plat .prix {
+  position: absolute;
+  right: 0;
+  font-weight: bold;
 }
 
 main .menu__plat h4, main .menu__plat p {
-  margin: 0;
+  margin: 10px;
+}
+
+main .menu__plat p {
+  font-size: 0.9em;
+}
+
+main .menu__plat div > p {
+  width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 main h3 {
@@ -263,9 +348,6 @@ main h3 {
   color: white;
   -webkit-box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
           box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
-}
-
-input.btn {
   border: none;
   display: block;
   min-width: 180px;
