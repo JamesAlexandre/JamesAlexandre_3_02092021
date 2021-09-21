@@ -58,6 +58,7 @@ nav .explorer {
 footer {
   background-color: #3f3f3f;
   padding: 15px;
+  margin-top: -50px;
 }
 footer h2, footer div, footer a {
   color: white;
@@ -113,6 +114,7 @@ footer > a {
   flex-direction: column;
   align-items: center;
   background-color: #f1f1f1;
+  padding-bottom: 50px;
 }
 .restaurants h1 {
   margin-right: auto;
@@ -172,12 +174,17 @@ footer > a {
     opacity: 1;
   }
 }
+.background-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
 main {
+  transform: translateY(-50px);
   background-color: #f1f1f1;
   padding-bottom: 40px;
-}
-main img {
-  width: 100%;
+  border-radius: 50px 50px 0 0;
 }
 main .menu {
   padding: 40px 0;
@@ -206,7 +213,33 @@ main .menu__plat {
   display: flex;
   align-items: flex-end;
   position: relative;
-  animation: slidedown 2s;
+  height: 67px;
+  animation-name: slidedown;
+  animation-duration: 2s;
+  overflow: hidden;
+}
+main .menu__plat:hover > .slide {
+  transform: translateX(0);
+}
+main .menu__plat:hover > .slide i {
+  transform: rotate(0turn);
+}
+main .menu__plat .slide {
+  background-color: #99E2D0;
+  transform-origin: right;
+  transition: transform 300ms linear;
+  height: 100%;
+  width: 100%;
+  border-radius: 0 20px 20px 0;
+  transform: translateX(101%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+main .menu__plat i {
+  transform: rotate(-1turn);
+  transition: transform 500ms;
 }
 main .menu__plat .prix {
   position: absolute;
@@ -231,6 +264,38 @@ main h3 {
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 2px;
   width: min-content;
+}
+
+.anim-delay2 {
+  animation-delay: 150ms;
+}
+
+.anim-delay3 {
+  animation-delay: 300ms;
+}
+
+.anim-delay4 {
+  animation-delay: 450ms;
+}
+
+.anim-delay5 {
+  animation-delay: 600ms;
+}
+
+.anim-delay6 {
+  animation-delay: 750ms;
+}
+
+.anim-delay7 {
+  animation-delay: 900ms;
+}
+
+.anim-delay8 {
+  animation-delay: 1050ms;
+}
+
+.anim-delay9 {
+  animation-delay: 1200ms;
 }
 
 .btn {

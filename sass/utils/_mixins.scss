@@ -35,3 +35,12 @@
     text-align: center;
 }
 
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin hover-btn {
+    
+}

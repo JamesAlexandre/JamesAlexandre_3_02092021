@@ -81,6 +81,7 @@ nav .explorer {
 footer {
   background-color: #3f3f3f;
   padding: 15px;
+  margin-top: -50px;
 }
 
 footer h2, footer div, footer a {
@@ -158,6 +159,7 @@ footer > a {
       -ms-flex-align: center;
           align-items: center;
   background-color: #f1f1f1;
+  padding-bottom: 50px;
 }
 
 .restaurants h1 {
@@ -250,13 +252,19 @@ footer > a {
   }
 }
 
-main {
-  background-color: #f1f1f1;
-  padding-bottom: 40px;
+.background-img img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-main img {
-  width: 100%;
+main {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  background-color: #f1f1f1;
+  padding-bottom: 40px;
+  border-radius: 50px 50px 0 0;
 }
 
 main .menu {
@@ -301,8 +309,56 @@ main .menu__plat {
       -ms-flex-align: end;
           align-items: flex-end;
   position: relative;
-  -webkit-animation: slidedown 2s;
-          animation: slidedown 2s;
+  height: 67px;
+  -webkit-animation-name: slidedown;
+          animation-name: slidedown;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  overflow: hidden;
+}
+
+main .menu__plat:hover > .slide {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+main .menu__plat:hover > .slide i {
+  -webkit-transform: rotate(0turn);
+          transform: rotate(0turn);
+}
+
+main .menu__plat .slide {
+  background-color: #99E2D0;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 300ms linear;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+  height: 100%;
+  width: 100%;
+  border-radius: 0 20px 20px 0;
+  -webkit-transform: translateX(101%);
+          transform: translateX(101%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+main .menu__plat i {
+  -webkit-transform: rotate(-1turn);
+          transform: rotate(-1turn);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
 }
 
 main .menu__plat .prix {
@@ -334,6 +390,46 @@ main h3 {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+}
+
+.anim-delay2 {
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+
+.anim-delay3 {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.anim-delay4 {
+  -webkit-animation-delay: 450ms;
+          animation-delay: 450ms;
+}
+
+.anim-delay5 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.anim-delay6 {
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
+}
+
+.anim-delay7 {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.anim-delay8 {
+  -webkit-animation-delay: 1050ms;
+          animation-delay: 1050ms;
+}
+
+.anim-delay9 {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
 }
 
 .btn {
