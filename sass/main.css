@@ -28,14 +28,15 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 15px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 15px;
 }
 
 header img {
   width: 50%;
+  max-width: 260px;
 }
 
 header a {
@@ -54,10 +55,12 @@ nav .localisation {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #e9e9e9;
+  -webkit-box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.342);
+          box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.342);
 }
 
 nav .localisation p {
@@ -100,6 +103,17 @@ footer > a {
   display: block;
 }
 
+@media screen and (min-width: 800px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .fonctionnement h1 {
   margin-left: 20px;
 }
@@ -111,29 +125,39 @@ footer > a {
 
 .fonctionnement li {
   width: 80%;
+  max-width: 515px;
+  min-width: 270px;
   margin: 20px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #f1f1f1;
-  height: 70px;
-  border-radius: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f1f1f1;
+  height: 70px;
+  border-radius: 20px;
   position: relative;
   -webkit-box-shadow: 5px 5px 15px -6px #bbb3b3;
           box-shadow: 5px 5px 15px -6px #bbb3b3;
   font-weight: bolder;
 }
 
+.fonctionnement li:hover > i {
+  color: #9356DC;
+}
+
+.fonctionnement li:hover {
+  background: #f2eafb;
+}
+
 .fonctionnement div {
   position: absolute;
   left: -8px;
-  background-color: blueviolet;
+  background-color: #9356DC;
   width: 20px;
   border-radius: 100%;
   text-align: center;
@@ -148,6 +172,16 @@ footer > a {
 }
 
 .restaurants {
+  background-color: #f1f1f1;
+  padding-bottom: 50px;
+}
+
+.restaurants h1 {
+  margin: 20px;
+  padding-top: 20px;
+}
+
+.restaurants__liste {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,13 +192,6 @@ footer > a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f1f1f1;
-  padding-bottom: 50px;
-}
-
-.restaurants h1 {
-  margin-right: auto;
-  margin-left: 20px;
 }
 
 .restaurants img {
@@ -205,7 +232,6 @@ footer > a {
 }
 
 .restaurants i {
-  display: block;
   position: absolute;
   right: 10px;
   bottom: 20px;
@@ -224,6 +250,33 @@ footer > a {
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+@media screen and (min-width: 800px) {
+  .fonctionnement ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .fonctionnement ul li {
+    width: 30%;
+  }
+  .restaurants__liste {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: wrap row;
+            flex-flow: wrap row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .restaurants a {
+    width: 40%;
+    max-width: 600px;
+  }
 }
 
 @-webkit-keyframes slidedown {
@@ -273,6 +326,14 @@ main .menu {
   margin: 0 auto;
 }
 
+main .menu h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 2px;
+  width: 48px;
+}
+
 main .menu__nom-restaurant {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -315,6 +376,9 @@ main .menu__plat {
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   overflow: hidden;
+  -webkit-box-flex: initial;
+      -ms-flex: initial;
+          flex: initial;
 }
 
 main .menu__plat:hover > .slide {
@@ -336,7 +400,7 @@ main .menu__plat .slide {
   transition: transform 300ms linear;
   transition: transform 300ms linear, -webkit-transform 300ms linear;
   height: 100%;
-  width: 100%;
+  width: 80px;
   border-radius: 0 20px 20px 0;
   -webkit-transform: translateX(101%);
           transform: translateX(101%);
@@ -350,6 +414,9 @@ main .menu__plat .slide {
       -ms-flex-align: center;
           align-items: center;
   color: white;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
 }
 
 main .menu__plat i {
@@ -369,27 +436,19 @@ main .menu__plat .prix {
 
 main .menu__plat h4, main .menu__plat p {
   margin: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 main .menu__plat p {
   font-size: 0.9em;
 }
 
-main .menu__plat div > p {
-  width: 260px;
+main .menu__plat div {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-main h3 {
-  text-transform: uppercase;
-  font-weight: lighter;
-  border-bottom: 3px solid #99E2D0;
-  padding-bottom: 2px;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
 }
 
 .anim-delay2 {
@@ -432,6 +491,23 @@ main h3 {
           animation-delay: 1200ms;
 }
 
+@media screen and (min-width: 900px) {
+  .menu {
+    max-width: 1296px;
+  }
+  .menu__plat {
+    width: 280px;
+  }
+  .menu__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .btn {
   background: linear-gradient(160deg, #FF79DA 0%, #9356DC 100%);
   height: 50px;
@@ -449,5 +525,14 @@ main h3 {
   min-width: 180px;
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  -webkit-box-shadow: 5px 5px 15px -6px #444343;
+          box-shadow: 5px 5px 15px -6px #444343;
 }
 /*# sourceMappingURL=main.css.map */

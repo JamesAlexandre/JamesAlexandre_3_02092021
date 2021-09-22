@@ -17,3 +17,10 @@ footer {
         display: block;
     }
 }
+
+@media screen and (min-width:800px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}

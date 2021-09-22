@@ -5,5 +5,9 @@
     min-width: 180px;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
+    transition: all 200ms ease-in-out;
+    &:hover {
+        @include hover-btn;
+    }
 }
 

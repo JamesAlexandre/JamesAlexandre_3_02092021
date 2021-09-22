@@ -13,19 +13,6 @@
     @include box-shadow
 }
 
-@mixin fonctionnement-li {
-    width: 80%;
-    margin: 20px auto;
-    display: flex;
-    background-color: $background;
-    height: 70px;
-    border-radius: 20px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    @include box-shadow(rgb(187, 179, 179))
-}
-
 @mixin step-number {
     position: absolute;
     left: -8px;
@@ -42,5 +29,7 @@
 }
 
 @mixin hover-btn {
-    
+    cursor: pointer;
+    opacity: 0.9;
+    @include box-shadow(rgb(68, 67, 67))
 }

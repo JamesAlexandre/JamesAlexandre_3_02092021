@@ -6,13 +6,29 @@
         padding-inline-start: 0;
     }
     li {
-        @include fonctionnement-li;
+        width: 80%;
+        max-width: 515px;
+        min-width: 270px;
+        margin: 20px auto;
+        @include flex;
+        background-color: $background;
+        height: 70px;
+        border-radius: 20px;
+        position: relative;
+        @include box-shadow(rgb(187, 179, 179));
         font-weight: bolder;
+        &:hover > i{
+            color: $color-primary;  
+        }
+
+        &:hover {
+            background: lighten($color-primary, $amount: 35);
+        }
     }
     div {
         position: absolute;
         left: -8px;
-        background-color: blueviolet;
+        background-color: $color-primary;
         width: 20px;
         border-radius: 100%;
         text-align: center;
@@ -27,14 +43,16 @@
 }
 
 .restaurants {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: $background;
     padding-bottom: 50px;
     h1 {
-        margin-right: auto;
-        margin-left: 20px;
+        margin: 20px;
+        padding-top: 20px;
+    }
+    &__liste {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     img {
         height: 150px;
@@ -62,13 +80,12 @@
         font-size: 1.2em;
     }
     i {
-        display: block;
         position: absolute;
         right: 10px;
         bottom: 20px;
         font-size: 1.5em;
-
     }
+
     &__new {
         max-width: fit-content;
         background-color: rgb(169, 255, 219);
@@ -79,5 +96,32 @@
         position: absolute;
         top: 15px;
         right: 15px;
+    }
+}
+
+
+@media screen and (min-width:800px) {
+    .fonctionnement {
+        ul {
+            display: flex;
+            justify-content: center;
+
+            li {
+                width: 30%;
+                
+            }
+        }
+    }
+
+    .restaurants {
+        &__liste {
+            flex-flow: wrap row;
+            justify-content: center;
+        }
+        
+        a {
+            width: 40%;
+            max-width: 600px;
+        }
     }
 }

@@ -29,6 +29,14 @@ main {
         padding: 40px 0;
         width: 90%;
         margin: 0 auto;
+
+        h3 {
+            text-transform: uppercase;
+            font-weight: lighter;
+            border-bottom: 3px solid $color-tertiary;
+            padding-bottom: 2px;
+            width: 48px;
+        }
         
         &__nom-restaurant {
             display: flex;
@@ -56,6 +64,8 @@ main {
             animation-name: slidedown;
             animation-duration: 2s;
             overflow: hidden;
+            flex: initial;
+             
             &:hover > .slide {
                 transform: translateX(0);
                 
@@ -69,11 +79,12 @@ main {
                 transform-origin: right;
                 transition: transform 300ms linear;
                 height: 100%;
-                width: 100%;
+                width: 80px;
                 border-radius: 0 20px 20px 0;
                 transform: translateX(101%);
                 @include flex;
                 color: white;
+                flex: auto;
                 
             }
 
@@ -88,25 +99,22 @@ main {
             }
             h4, p {
                 margin: 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             p {
                 font-size: 0.9em;
+
             }
-            div > p {
-                width: 260px;
+            div {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
         }
     }
-    h3 {
-        text-transform: uppercase;
-        font-weight: lighter;
-        border-bottom: 3px solid $color-tertiary;
-        padding-bottom: 2px;
-        width: min-content;
-    }
+    
     
 }
 
@@ -140,4 +148,18 @@ main {
 
 .anim-delay9 {
     animation-delay: 1200ms;
+}
+
+@media screen and (min-width: 900px) {
+    .menu {
+        max-width: 1296px;
+        &__plat {
+            width: 280px;
+            
+        }
+        &__container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
