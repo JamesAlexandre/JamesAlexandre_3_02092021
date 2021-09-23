@@ -1,0 +1,31 @@
+@keyframes slidedown {
+    from {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;  
+    }
+}
+
+@keyframes page_loader {
+    from {
+        
+    }
+    to {
+        z-index: -1;
+    }
+}
+
+@keyframes spin {
+
+    0% {
+        transform: rotate(-360deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+  }

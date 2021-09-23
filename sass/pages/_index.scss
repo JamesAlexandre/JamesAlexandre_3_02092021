@@ -125,3 +125,30 @@
         }
     }
 }
+
+
+.loader {
+    position : fixed;
+    z-index: 9999;
+    background : rgba(252, 252, 252, 0.897) 50% 50% no-repeat;
+    top : 0px;
+    left : 0px;
+    height : 100%;
+    width : 100%;
+    cursor : wait;
+    animation: page_loader 4s forwards;
+    @include flex;
+    }
+
+    .spinner1 {
+        border: 10px solid white;
+        border-top: 10px solid #9356DC;
+        border-bottom: 10px solid #FF79DA;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        animation: spin 4s linear backwards;
+        opacity: 0;
+      }
+      
+  
