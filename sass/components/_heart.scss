@@ -1,20 +1,20 @@
 .heart {
-    &:hover #plein {
+    &:hover .plein {
       opacity: 1;
       transform: scale(1);
     }
-    &:hover #vide {
+    &:hover .vide {
       opacity: 0;
     }
     
   }
-  #vide {
+  .vide {
     position: absolute;
     z-index:1;
     transition: all 300ms ease-in-out;
   }
   
-  #plein {
+  .plein {
     z-index:-1;
     opacity:0;
     background:-webkit-linear-gradient(

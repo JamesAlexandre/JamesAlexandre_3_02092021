@@ -356,8 +356,8 @@ footer > a {
   height: 100%;
   width: 100%;
   cursor: wait;
-  -webkit-animation: page_loader 4s forwards;
-          animation: page_loader 4s forwards;
+  -webkit-animation: page_loader 3s forwards;
+          animation: page_loader 3s forwards;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -369,15 +369,15 @@ footer > a {
           align-items: center;
 }
 
-.spinner1 {
-  border: 10px solid white;
+.spinner {
+  border: 10px solid transparent;
   border-top: 10px solid #9356DC;
   border-bottom: 10px solid #FF79DA;
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  -webkit-animation: spin 4s linear backwards;
-          animation: spin 4s linear backwards;
+  -webkit-animation: spin 3s linear backwards;
+          animation: spin 3s linear backwards;
   opacity: 0;
 }
 
@@ -528,6 +528,7 @@ main .menu__plat div {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 80%;
 }
 
 .anim-delay2 {
@@ -615,24 +616,24 @@ main .menu__plat div {
           box-shadow: 5px 5px 15px -6px #444343;
 }
 
-.heart:hover #plein {
+.heart:hover .plein {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-.heart:hover #vide {
+.heart:hover .vide {
   opacity: 0;
 }
 
-#vide {
+.vide {
   position: absolute;
   z-index: 1;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
-#plein {
+.plein {
   z-index: -1;
   opacity: 0;
   background: -webkit-linear-gradient(160deg, #FF79DA 0%, #9356DC 100%);

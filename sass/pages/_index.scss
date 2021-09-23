@@ -136,18 +136,18 @@
     height : 100%;
     width : 100%;
     cursor : wait;
-    animation: page_loader 4s forwards;
+    animation: page_loader 3s forwards;
     @include flex;
     }
 
-    .spinner1 {
-        border: 10px solid white;
+    .spinner {
+        border: 10px solid transparent;
         border-top: 10px solid #9356DC;
         border-bottom: 10px solid #FF79DA;
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        animation: spin 4s linear backwards;
+        animation: spin 3s linear backwards;
         opacity: 0;
       }
       
