@@ -50,6 +50,7 @@ header {
   justify-content: center;
   align-items: center;
   padding: 15px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.212);
 }
 header img {
   width: 50%;
@@ -68,7 +69,7 @@ nav .localisation {
   justify-content: center;
   align-items: center;
   background-color: #e9e9e9;
-  box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.342);
+  margin-top: 2px;
 }
 nav .localisation p {
   margin: 15px;
@@ -104,7 +105,7 @@ footer > a {
 @media screen and (min-width: 800px) {
   footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 .fonctionnement h1 {
@@ -232,7 +233,6 @@ footer > a {
   left: 0px;
   height: 100%;
   width: 100%;
-  cursor: wait;
   animation: page_loader 3s forwards;
   display: flex;
   justify-content: center;
@@ -294,18 +294,17 @@ main .menu__plat {
   margin: 15px 0;
   box-shadow: 5px 5px 15px -6px rgba(68, 67, 67, 0.336);
   display: flex;
-  align-items: flex-end;
-  position: relative;
+  align-items: center;
+  justify-content: space-between;
   height: 67px;
   animation-name: slidedown;
   animation-duration: 3s;
   animation-fill-mode: forwards;
   overflow: hidden;
-  flex: initial;
   opacity: 0;
 }
 main .menu__plat:hover > .slide {
-  transform: translateX(0);
+  margin-right: 0;
 }
 main .menu__plat:hover > .slide i {
   transform: rotate(0turn);
@@ -313,28 +312,24 @@ main .menu__plat:hover > .slide i {
 main .menu__plat .slide {
   background-color: #99E2D0;
   transform-origin: right;
-  transition: transform 300ms linear;
+  transition: margin-right 300ms linear;
   height: 100%;
   width: 80px;
   border-radius: 0 20px 20px 0;
-  transform: translateX(101%);
+  margin-right: -80px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  flex: auto;
 }
 main .menu__plat i {
   transform: rotate(-1turn);
   transition: transform 500ms;
 }
-main .menu__plat .prix {
-  position: absolute;
-  right: 0;
-  font-weight: bold;
-}
 main .menu__plat h4, main .menu__plat p {
   margin: 10px;
+}
+main .menu__plat h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -342,11 +337,21 @@ main .menu__plat h4, main .menu__plat p {
 main .menu__plat p {
   font-size: 0.9em;
 }
-main .menu__plat div {
+main .menu__plat .prix {
+  font-weight: bold;
+  display: flex;
+  align-self: flex-end;
+}
+main .menu__content {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 80%;
+  width: 90%;
+}
+main .menu__description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .anim-delay2 {
@@ -393,6 +398,11 @@ main .menu__plat div {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 1400px) {
+  .menu__plat {
+    width: 350px;
+  }
+}
 .btn {
   background: linear-gradient(160deg, #FF79DA 0%, #9356DC 100%);
   height: 50px;
@@ -426,7 +436,7 @@ main .menu__plat div {
 .vide {
   position: absolute;
   z-index: 1;
-  transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .plein {
@@ -437,7 +447,7 @@ main .menu__plat div {
   -webkit-background-clip: text;
   color: transparent;
   transform: scale(0);
-  transition: all 200ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,7 @@
 header {
     @include flex;
     padding: 15px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.212);
     img {
         width: 50%;
         max-width: 260px;

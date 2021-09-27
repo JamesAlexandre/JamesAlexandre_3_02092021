@@ -3,7 +3,7 @@ nav {
     .localisation {
         @include flex;
         background-color: darken($background, 3%);
-        box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.342);
+        margin-top: 2px;
         p {
             margin: 15px;
         }

@@ -11,7 +11,7 @@
   .vide {
     position: absolute;
     z-index:1;
-    transition: all 300ms ease-in-out;
+    transition: all 200ms ease-in-out;
   }
   
   .plein {
@@ -23,5 +23,5 @@
     -webkit-background-clip:text;
     color:transparent;
     transform: scale(0);
-    transition: all 200ms ease-in-out;
+    transition: all 400ms ease-in-out;
   }

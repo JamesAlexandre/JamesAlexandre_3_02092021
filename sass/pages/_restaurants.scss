@@ -45,18 +45,17 @@ main {
             margin: 15px 0;
             @include box-shadow;
             display: flex;
-            align-items: flex-end;
-            position: relative;
+            align-items: center;
+            justify-content: space-between;
             height: 67px;
             animation-name: slidedown;
             animation-duration: 3s;
             animation-fill-mode: forwards;
             overflow: hidden;
-            flex: initial;
             opacity: 0;
              
             &:hover > .slide {
-                transform: translateX(0);
+                margin-right: 0;
                 
                 i {
                     transform: rotate(0turn);
@@ -66,14 +65,13 @@ main {
             .slide {
                 background-color: $color-tertiary;
                 transform-origin: right;
-                transition: transform 300ms linear;
+                transition: margin-right 300ms linear;
                 height: 100%;
                 width: 80px;
                 border-radius: 0 20px 20px 0;
-                transform: translateX(101%);
+                margin-right: -80px;
                 @include flex;
                 color: white;
-                flex: auto;
                 
             }
 
@@ -81,13 +79,11 @@ main {
                 transform: rotate(-1turn);
                 transition: transform 500ms;
             }
-            .prix {
-                position: absolute;
-                right: 0;
-                font-weight: bold;
-            }
+
             h4, p {
                 margin: 10px;
+            }
+            h4 {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -96,12 +92,23 @@ main {
                 font-size: 0.9em;
 
             }
-            div {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                width: 80%;
+            .prix {
+                font-weight: bold;
+                display: flex;
+                align-self:flex-end;
             }
+            
+        }
+        &__content {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 90%;
+        }
+        &__description {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
     
@@ -150,6 +157,14 @@ main {
         &__container {
             display: flex;
             justify-content: space-between;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .menu {
+        &__plat {
+            width: 350px;
         }
     }
 }
